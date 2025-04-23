@@ -30,7 +30,7 @@ const Intro = () => {
           <span style={{ color: darkMode ? "white" : "" }}>Hey! I Am</span>
           <span>Biswajit Mahapatra</span>
           <span>
-          <b>UI/UX Designer</b> and <b>FrontEnd Developer</b> with expertise in web design, development, and <b>Python programming</b>,
+          <b>UI/UX Designer</b> and <b>FrontEnd Developer</b> with expertise in <b>Graphic Designing</b> and <b>Python programming</b>,
            delivering high-quality, user-friendly, and innovative digital solutions.
           </span>
         </div>
@@ -73,7 +73,7 @@ const Intro = () => {
           transition={transition}
           className="floating-div"
         >
-          <FloatinDiv img={crown} text1="PYTHON" text2="Developer" />
+          <FloatinDiv img={crown} text1="DESIGNER"  />
         </motion.div>
 
         {/* animation */}
@@ -84,7 +84,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="UI/UX" text2="Designer" />
+          <FloatinDiv img={thumbup} text1="DEVELOPER" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

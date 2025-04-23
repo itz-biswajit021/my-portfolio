@@ -27,8 +27,10 @@ const Services = () => {
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
         <spane>
-        I offer UI/UX design, frontend development, and Python development services,<br/> creating responsive websites, intuitive interfaces, and automated solutions.
-        <br/>My expertise in web technologies, data visualization, and <br/>cybersecurity ensures high-quality, user-friendly digital experiences.
+          I specialize in UI/UX design, frontend development, and Python-based solutions, <br/>delivering sleek, responsive websites and intuitive user interfaces.<br/>
+          In addition to graphic designing, <br/>I craft seamless digital experiences and build smart automation tools tailored to your needs.<br/>
+
+          With a strong foundation in web technologies, data visualization, and cybersecurity,<br/> I ensure every project is secure, user-centric, and performance-optimized<br/>—from design to deployment.
         </spane>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
@@ -45,8 +47,8 @@ const Services = () => {
         >
           <Card
             emoji={HeartEmoji}
-            heading={"UI/UX"}
-            detail={"Creative skill in FIGMA, wireframing, prototyping, and user experience."}
+            heading={"DESIGN"}
+            detail={"Creative graphic designing skilled in ADOBE Suite and CANVA."}
           />
         </motion.div>
         {/* second card */}
@@ -58,7 +60,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"FRONTEND"}
-            detail={"Expertise in HTML, CSS, JavaScript, React, UI design, and responsiveness."}
+            detail={"Expertise in HTML, CSS, JavaScript, React, UI design(FIGMA), and responsiveness."}
           />
         </motion.div>
         {/* 3rd */}

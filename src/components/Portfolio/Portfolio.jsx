@@ -19,37 +19,53 @@ const Portfolio = () => {
 
       {/* slider */}
       <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-        <SwiperSlide>
-          <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-            <img src={jarvis} alt="Jarvis Project" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://github.com/itz-biswajit021/GesturePainting.git" target="_blank" rel="noopener noreferrer">
-            <img src={paint} alt="Paint Project" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://www.figma.com/design/tykJxE8Khe61tdR2jwkdvk/UBER_LandingPage?node-id=0-1&t=TJcYo0tHasT0sMAX-1" target="_blank" rel="noopener noreferrer">
-            <img src={uber} alt="UBER design" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-            <img src={MusicApp} alt="Paint Project" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-            <img src={HOC} alt="Paint Project" />
-          </a>
-        </SwiperSlide>
-      </Swiper>
+  spaceBetween={-80}
+  slidesPerView={"auto"}
+  centeredSlides={true}
+  grabCursor={true}
+  className="portfolio-slider"
+  breakpoints={{
+    0: {           // Mobile (0px to 639px)
+      slidesPerView: 1.3,
+      spaceBetween: 10,
+    },
+    640: {         // Tablet (640px to 767px)
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+    768: {         // Desktop (768px+)
+      slidesPerView: "auto",
+      spaceBetween: -80,
+    },
+  }}
+>
+  <SwiperSlide >
+    <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
+      <img src={jarvis} alt="Jarvis Project" />
+    </a>
+  </SwiperSlide>
+  <SwiperSlide >
+    <a href="https://github.com/itz-biswajit021/GesturePainting.git" target="_blank" rel="noopener noreferrer">
+      <img src={paint} alt="Paint Project" />
+    </a>
+  </SwiperSlide>
+  <SwiperSlide >
+    <a href="https://www.figma.com/design/tykJxE8Khe61tdR2jwkdvk/UBER_LandingPage?node-id=0-1&t=TJcYo0tHasT0sMAX-1" target="_blank" rel="noopener noreferrer">
+      <img src={uber} alt="UBER design" />
+    </a>
+  </SwiperSlide>
+  <SwiperSlide >
+    <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
+      <img src={MusicApp} alt="Music App" />
+    </a>
+  </SwiperSlide>
+  <SwiperSlide >
+    <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
+      <img src={HOC} alt="HOC Project" />
+    </a>
+  </SwiperSlide>
+</Swiper>
+
     </div>
   );
 };
