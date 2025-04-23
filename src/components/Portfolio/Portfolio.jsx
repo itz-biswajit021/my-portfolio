@@ -5,9 +5,10 @@ import "swiper/css";
 import jarvis from "../../img/JarvisAI.png";
 import paint from "../../img/paint program.jpg";
 import uber from "../../img/uber design.jpg";
-import HOC from "../../img/hoc.png";
-import MusicApp from "../../img/musicapp.png";
+import can from "../../img/COFFEE CAN.png";
+import cup from "../../img/COFFEEcup.png";
 import { themeContext } from "../../Context";
+
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -39,31 +40,38 @@ const Portfolio = () => {
     },
   }}
 >
-  <SwiperSlide >
-    <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-      <img src={jarvis} alt="Jarvis Project" />
-    </a>
-  </SwiperSlide>
+  
   <SwiperSlide >
     <a href="https://github.com/itz-biswajit021/GesturePainting.git" target="_blank" rel="noopener noreferrer">
       <img src={paint} alt="Paint Project" />
     </a>
   </SwiperSlide>
+
+  <SwiperSlide >
+    <a href="https://www.canva.com/design/DAGk_NTxauw/kDApDdQoaOIhXQ901yCQ2w/edit?utm_content=DAGk_NTxauw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
+      <img src={cup} alt="Coffee Cup Project" />
+    </a>
+  </SwiperSlide>
+
   <SwiperSlide >
     <a href="https://www.figma.com/design/tykJxE8Khe61tdR2jwkdvk/UBER_LandingPage?node-id=0-1&t=TJcYo0tHasT0sMAX-1" target="_blank" rel="noopener noreferrer">
       <img src={uber} alt="UBER design" />
     </a>
   </SwiperSlide>
+
+
   <SwiperSlide >
-    <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-      <img src={MusicApp} alt="Music App" />
+    <a href="https://www.canva.com/design/DAGlEs8YDeY/qUJb4QsqX7uveZqTziccPw/edit?utm_content=DAGlEs8YDeY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
+      <img src={can} alt="Coffee Can Project" />
     </a>
   </SwiperSlide>
+
   <SwiperSlide >
     <a href="https://github.com/your-username/sidebar-repo" target="_blank" rel="noopener noreferrer">
-      <img src={HOC} alt="HOC Project" />
+      <img src={jarvis} alt="Jarvis Project" />
     </a>
   </SwiperSlide>
+
 </Swiper>
 
     </div>
