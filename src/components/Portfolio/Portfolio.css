@@ -303,7 +303,7 @@
 @media (max-width: 640px) {
   .portfolio {
     padding: 3rem 1rem;
-    min-height: 100vh;
+    min-height: 70vh;
   }
 
   .portfolio span:nth-of-type(1) {
@@ -348,6 +348,6 @@
 
   .project-tags-layer {
     justify-content: center;
-    margin-top: 15px;
+    margin: 10px;
   }
 }
