@@ -42,6 +42,7 @@
   filter: blur(1px);
 
   transition: all 0.5s ease;
+  margin-top: 10px;
 }
 
 /* ACTIVE SLIDE */
@@ -302,7 +303,7 @@
 @media (max-width: 640px) {
   .portfolio {
     padding: 3rem 1rem;
-    min-height: 70vh;
+    min-height: 100vh;
   }
 
   .portfolio span:nth-of-type(1) {
