@@ -1,82 +1,207 @@
+/* ================= MAIN ================= */
 .Intro {
   display: flex;
-  height: 77vh;
-  margin-top: 6rem;
+  min-height: 60vh;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
-/* left side styling */
+/* ================= LEFT ================= */
 .i-left {
   display: flex;
-  position: relative;
   flex: 1;
   flex-direction: column;
   gap: 2rem;
 }
+
 .i-name {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
+
+.i-name b {
+  font-weight: 700 !important;
+}
+
+/* Greeting */
 .i-name > :nth-child(1) {
   color: var(--black);
-  font-weight: bold;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
+
+/* ================= NAME ================= */
 .i-name > :nth-child(2) {
-  color: var(--orange);
-  font-weight: bold;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.2;
 }
-.i-name > :nth-child(3) {
-  font-weight: 100;
-  font-size: 14px;
+
+/* ================= TYPING NAME ================= */
+.typing-name {
+  display: inline-block;
+  white-space: nowrap;
+
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 3.8rem;
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #ff8a00,
+    #e52e71,
+    #6a5cff,
+    #00c6ff
+  );
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ================= FIXED GLOW LETTER ================= */
+.glow-letter {
+  display: inline-block;
+  font-size: inherit;   /* ✅ ONLY THIS — FIXED */
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: pre;
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+.glow-letter:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.glow-letter:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 0px rgba(255, 165, 0, 0); }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 165, 0, 0.7),
+      0 0 12px rgba(255, 120, 0, 0.5);
+  }
+  100% { text-shadow: 0 0 0px rgba(255, 165, 0, 0); }
+}
+
+.word {
+  display: inline-block;
+}
+
+.space {
+  display: inline-block;
+  width: 0.4em;
+}
+
+/* ================= CURSOR ================= */
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: bold;
+  color: var(--orange);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ================= DYNAMIC ROLE ================= */
+.dynamic-role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--orange);
+  margin-top: 4px;
+  min-height: 20px;
+}
+
+/* ================= DESCRIPTION ================= */
+.i-name > :nth-child(4) {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--gray);
   margin-top: 10px;
+  max-width: 450px;
 }
+
+/* ================= BUTTON ================= */
 .i-button {
-  width: 6rem;
-  height: 2rem;
+  width: 7rem;
+  height: 2.3rem;
 }
+
+/* ================= SOCIAL ================= */
 .i-icons {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   display: flex;
-  gap: 0rem;
+  gap: 0.6rem;
 }
+
 .i-icons > * {
-  transform: scale(0.5);
+  transform: scale(0.6);
+  transition: transform 0.2s ease;
 }
+
 .i-icons > *:hover {
   cursor: pointer;
+  transform: scale(0.7);
 }
-/* right side styling */
+
+/* ================= RIGHT ================= */
 .i-right {
   flex: 1;
   position: relative;
+  width: 100%;
+  height: 24rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
+
 .i-right > * {
   position: absolute;
   z-index: 1;
 }
+
+/* shapes */
 .i-right > :nth-child(1) {
   transform: scale(0.69);
   left: -15%;
   top: -9%;
 }
+
 .i-right > :nth-child(2) {
   top: -4.6rem;
   transform: scale(0.67);
   left: -3rem;
 }
+
 .i-right > :nth-child(3) {
-  transform: scale(1.4);
-  left: 28%;
+  transform: scale(1.3);
+  left: 26%;
 }
+
 .i-right > :nth-child(4) {
-  transform: scale(0.62);
-  top: -19%;
-  left: -24%;
+  transform: scale(0.6);
+  top: -18%;
+  left: -22%;
   border-radius: 50%;
-  padding: 0;
 }
 
 /* blur */
@@ -86,29 +211,119 @@
   height: 14rem;
   border-radius: 50%;
   background: #edd0ff;
-  filter: blur(212px);
+  filter: blur(72px);
   z-index: -9;
   top: -18%;
   left: 56%;
-  filter: blur(72px);
 }
 
+/* floating */
+.floating-div {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) scale(0.75);
+  z-index: 4;
+}
+
+.floating-div:nth-of-type(1) {
+  top: 2rem !important;
+  left: 70% !important;
+}
+
+.floating-div:nth-of-type(2) {
+  top: 17rem !important;
+  left: -5% !important;
+}
+
+/* ================= TABLET ================= */
+@media screen and (max-width: 900px) {
+  .Intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .i-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .typing-name {
+    white-space: normal;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .i-name > :nth-child(4) {
+    max-width: 90%;
+  }
+}
+
+/* ================= MOBILE ================= */
 @media screen and (max-width: 480px) {
   .Intro {
     flex-direction: column;
-    gap: 7rem;
-    height: 64rem;
+    gap: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .i-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .typing-name {
+    white-space: normal;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .word {
+    display: block;
+  }
+
+  .i-name > :nth-child(4) {
+    font-size: 0.95rem;
+  }
+
+  .i-icons {
+    justify-content: center;
   }
 
   .i-right {
-    transform: scale(0.8);
-    left: -3rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .i-right .blur {
+
+  .i-right > :nth-child(1) {
     display: none;
   }
-  .floating-div:nth-of-type(1){
-    /* display: none; */
-    top: -7rem !important;;
+
+  .i-right > :nth-child(2) {
+    transform: scale(0.5);
+    left: -50%;
+    top: -70px;
+  }
+
+  .i-right > :nth-child(3) {
+    position: relative;
+    width: 75%;
+    transform: scale(1);
+    left: 0;
+  }
+
+  .i-right > :nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: scale(0.6);
+  }
+
+  .i-right .blur {
+    display: none;
   }
 }

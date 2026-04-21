@@ -1,48 +1,95 @@
 .card {
-  width: 10rem;
-  height: 13rem;
-  position: absolute;
+  width: 11rem;
+  min-height: 14rem; /* flexible height */
+  position: relative; /* 🔥 FIX: no absolute */
+
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
-  width: 10rem;
+  justify-content: space-between;
+
+  gap: 0.8rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.26);
-  border: 7px solid var(--orangeCard);
+
+  background: rgba(255, 255, 255, 0.3);
+  border: 6px solid var(--orangeCard);
   box-shadow: var(--boxShadow);
-  border-radius: 20px;
-  padding: 0px 26px 2rem 26px;
+  border-radius: 18px;
+
+  padding: 1.2rem 1rem;
+  backdrop-filter: blur(6px); /* subtle premium feel */
 }
+
+/* heading */
+.card span:nth-of-type(1) {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+/* description */
 .card span:nth-of-type(2) {
   color: var(--gray);
-  font-size: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0 0.3rem;
 }
+
+/* emoji/image */
 .card > img {
-  transform: scale(0.6);
-  margin-bottom: -2rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  margin-bottom: -0.5rem;
 }
+
+/* button */
 .c-button {
-    background: #FFFFFF;
-    box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
-    border-radius: 7px;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    color: #5290FD;
+  background: #ffffff;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  border: none;
+
+  padding: 7px 12px;
+  font-size: 0.8rem;
+  color: #5290FD;
+
+  margin-top: auto;
+  transition: all 0.2s ease;
 }
 
-.c-button:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+.c-button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
 }
-/* cards */
 
+/* ================= TABLET ================= */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 80%;
+    min-height: 13.5rem;
+  }
+}
 
+/* ================= MOBILE ================= */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    min-height: 13rem;
+    padding: 1rem;
+  }
 
+  .card span:nth-of-type(1) {
+    font-size: 0.95rem;
+  }
 
-@media screen and (max-width: 480px){
-  .card{
-    width: auto;
+  .card span:nth-of-type(2) {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .c-button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 }

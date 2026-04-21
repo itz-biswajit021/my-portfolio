@@ -1,31 +1,70 @@
 import React from "react";
 import "./Footer.css";
 import Wave from "../../img/wave.png";
+
 import Insta from "@iconscout/react-unicons/icons/uil-instagram";
 import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
-import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import Github from "@iconscout/react-unicons/icons/uil-github";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <img src={Wave} alt="" style={{ width: "100%" }} />
-      <div className="f-content">
-        <span>021biswajit@gmail.com</span>
-        <div className="f-icons">
-  <a href="https://www.instagram.com/_biswajit_mahapatra_/" target="_blank" rel="noopener noreferrer">
-    <Insta color="white" size={"3rem"} />
-  </a>
+    <footer className="footer">
 
-  <a href="https://facebook.com/your-facebook" target="_blank" rel="noopener noreferrer">
-    <Facebook color="white" size={"3rem"} />
-  </a>
-
-  <a href="https://github.com/itz-biswajit021" target="_blank" rel="noopener noreferrer">
-    <Gitub color="white" size={"3rem"} />
-  </a>
-</div>
+      {/* 🌊 WAVE BACKGROUND */}
+      <div className="footer-wave">
+        <img src={Wave} alt="footer wave" />
       </div>
-    </div>
+
+      {/* 🔥 CONTENT */}
+      <div className="f-content">
+
+        {/* 📧 EMAIL */}
+        <a
+          href="mailto:021biswajit@gmail.com"
+          className="f-email"
+        >
+          021biswajit@gmail.com
+        </a>
+
+        {/* 🌐 SOCIAL ICONS */}
+        <div className="f-icons">
+
+          <a
+            href="https://www.instagram.com/_biswajit_mahapatra_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Insta />
+          </a>
+
+          <a
+            href="https://facebook.com/your-facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook />
+          </a>
+
+          <a
+            href="https://github.com/itz-biswajit021"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <Github />
+          </a>
+
+        </div>
+
+        {/* 🧑‍💻 COPYRIGHT / SIGNATURE */}
+        <span className="f-copy">
+          © {new Date().getFullYear()} Biswajit Mahapatra • All Rights Reserved
+        </span>
+
+      </div>
+    </footer>
   );
 };
 

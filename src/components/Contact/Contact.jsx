@@ -2,68 +2,136 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
   const form = useRef();
+
   const [done, setDone] = useState(false);
+  const [focused, setFocused] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleFocus = (field) => {
+    setFocused({ ...focused, [field]: true });
+  };
+
+  const handleBlur = (field, value) => {
+    setFocused({ ...focused, [field]: value !== "" });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_wy2s6dk",  // Your EmailJS Service ID
-        "template_jyrvaw6", // Your EmailJS Template ID
+        "service_w1um53e",
+        "template_n2pf7op",
         form.current,
-        "YMJ4drPBKlcG2b4SH" // Your Public Key
+        "YMJ4drPBKlcG2b4SH"
       )
       .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
+        () => {
           setDone(true);
-          form.current.reset(); // Reset form
+          form.current.reset();
 
-          // Hide the message after 3 seconds
           setTimeout(() => {
             setDone(false);
           }, 3000);
         },
         (error) => {
-          console.error("Email send error:", error.text);
+          console.error(error.text);
         }
       );
   };
 
   return (
-    <div className="contact-form" id="contact">
-      {/* Left Side */}
+    <div className={`contact-form ${darkMode ? "dark" : ""}`} id="contact">
+
+      {/* LEFT */}
       <div className="w-left">
         <div className="awesome">
-          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Get in Touch
+          </span>
           <span>Contact me</span>
-          <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
         </div>
       </div>
 
-      {/* Right Side Form */}
+      {/* RIGHT */}
       <div className="c-right">
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user" placeholder="Name" required />
-          <input type="email" name="user_email" className="user" placeholder="Email" required />
-          <textarea name="message" className="user" placeholder="Message" required />
-          <input type="submit" value="Send" className="button" />
+        <form ref={form} onSubmit={sendEmail} className="form-card">
+
+          {/* NAME */}
+          <div className="input-group">
+            <i className="icon">👤</i>
+            <input
+              type="text"
+              name="user_name"
+              required
+              onFocus={() => handleFocus("name")}
+              onBlur={(e) => handleBlur("name", e.target.value)}
+            />
+            <label className={focused.name ? "active" : ""}>Name</label>
+          </div>
+
+          {/* EMAIL */}
+          <div className="input-group">
+            <i className="icon">📧</i>
+            <input
+              type="email"
+              name="user_email"
+              required
+              onFocus={() => handleFocus("email")}
+              onBlur={(e) => handleBlur("email", e.target.value)}
+            />
+            <label className={focused.email ? "active" : ""}>Email</label>
+          </div>
+
+          {/* MESSAGE */}
+          <div className="input-group textarea-group">
+            <i className="icon">💬</i>
+            <textarea
+              name="message"
+              required
+              onFocus={() => handleFocus("message")}
+              onBlur={(e) => handleBlur("message", e.target.value)}
+            />
+            <label className={focused.message ? "active" : ""}>
+              Message
+            </label>
+          </div>
+
+          {/* BUTTON */}
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            className="button"
+            type="submit"
+          >
+            Send
+          </motion.button>
+
         </form>
 
-        {/* Thanks message with 3D effect */}
-        {done && (
-          <div className="thank-you-box">
-            Thanks for contacting me!
-          </div>
-        )}
+        {/* SUCCESS ✔ */}
+        <AnimatePresence>
+          {done && (
+            <motion.div
+              className="success-popup"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+            >
+              ✔ Message Sent Successfully
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        <div className="blur c-blur1" style={{ background: "var(--purple)" }}></div>
       </div>
     </div>
   );
