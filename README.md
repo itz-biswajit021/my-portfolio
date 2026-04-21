@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# 🚀 Biswajit Mahapatra – Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive developer portfolio website built using React.js and enhanced with smooth animations, clean UI design, and interactive components.
 
-## Available Scripts
+This portfolio showcases my work in AI/ML, Full-Stack Development, and UI/UX Design, along with real-world projects and implementations.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🌐 Live Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👉 https://biswajit-portfolio-weld.vercel.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `yarn test`
+## 📌 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 🎨 Modern UI/UX Design
+* ⚡ Smooth animations using Framer Motion
+* 📱 Fully responsive (Mobile / Tablet / Desktop)
+* 🌙 Dark Mode support
+* 🧠 AI/ML Project Showcase
+* 🎯 Interactive Portfolio Slider (Swiper.js)
+* 📬 Contact Section
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* React.js
+* HTML5, CSS3
+* JavaScript (ES6+)
 
-### `yarn eject`
+### Libraries & Tools
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Framer Motion (animations)
+* Swiper.js (carousel/slider)
+* React Scroll
+* Context API (theme handling)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+my-portfolio-website/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Intro/
+│   │   ├── Navbar/
+│   │   ├── Services/
+│   │   ├── Cards/
+│   │   ├── Portfolio/
+│   │   ├── Experience/
+│   │   ├── Testimonials/
+│   │   ├── Contact/
+│   │   ├── Footer/
+│   │   ├── Toggle/
+│   │   └── FloatingDiv/
+│   │
+│   ├── img/
+│   ├── fonts/
+│   ├── Context.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1️⃣ Clone the repository
 
-### Code Splitting
+```bash
+git clone https://github.com/itz-biswajit021/my-portfolio.git
+cd my-portfolio-website
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2️⃣ Install dependencies
 
-### Analyzing the Bundle Size
+```bash
+yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+or
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3️⃣ Run the project
 
-### Advanced Configuration
+```bash
+yarn start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+or
 
-### Deployment
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👉 Open: http://localhost:3000
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📦 Build for Production
+
+```bash
+yarn build
+```
+
+Creates an optimized production build in the `build/` folder.
+
+---
+
+## 🚀 Deployment
+
+You can deploy this project using:
+
+* Vercel
+* Netlify
+* GitHub Pages
+
+---
+
+## 📸 Projects Included
+
+* 🤖 AI Interview Platform
+* 🧠 Hate Speech Detection (ML + DL + BERT)
+* 🏛️ Citizen Grievance Analyzer
+* 💬 Banking FAQ Chatbot
+* 🎨 UI/UX Design Projects (Figma)
+* 🖌️ Virtual Paint (OpenCV)
+* 🎨 Graphic Design Projects (Canva)
+
+---
+
+## 👨‍💻 Author
+
+**Biswajit Mahapatra**
+
+* GitHub: https://github.com/itz-biswajit021
+* LinkedIn: https://linkedin.com/in/biswajit-mahapatra-6231a8293
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project:
+
+* ⭐ Star this repository
+* 🍴 Fork it
+* 📢 Share it
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
