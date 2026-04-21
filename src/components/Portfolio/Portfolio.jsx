@@ -104,7 +104,7 @@ const Portfolio = () => {
   return (
     <div className={`portfolio ${darkMode ? "dark" : ""}`} id="portfolio">
       {/* HEADINGS */}
-      <span style={{ color: darkMode ? "white" : "" , fontSize: "2.2rem", fontWeight: "600" }}>
+      <span style={{ color: darkMode ? "white" : "" , fontSize: "2.2rem", fontWeight: "700" }}>
         Recent Projects
       </span>
       <span style={{ color: "#FCBF49" , fontSize: "1.8rem", fontWeight: "600" }}>
